@@ -1,14 +1,12 @@
-﻿using MongoDB.Bson.Serialization.Attributes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 
 namespace Catalog.API.DomainLayer.Entities.Abstract
 {
-    public class CoreItem
+    public abstract class CoreItem<T>
     {
         [BsonId]
-        public string Id { get; set; }
+        [BsonRepresentation(BsonType.ObjectId)]
+        public abstract T Id { get; set; }
     }
 }

@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace Catalog.API.DomainLayer.Entities.Concrete
 {
-    public class CatalogType:CoreItem
+    public class CatalogType: CoreItem<string>
     {
+        public override string Id { get; set; }
+
         public string Type { get; set; }
     }
 }
