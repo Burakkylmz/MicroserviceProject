@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <PackageReference Include="MongoDB.Bson" Version="2.12.0" />
   </ItemGroup>
 
 
